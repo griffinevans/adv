@@ -3,7 +3,6 @@ use rand::Rng;
 fn main() {
 
     let bytes = include_bytes!("advice");
-
     let contents = String::from_utf8_lossy(bytes);
     
     let advice: Vec<&str> = contents.trim().split('%').collect();
