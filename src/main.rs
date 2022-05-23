@@ -1,10 +1,10 @@
-use std::fs;
 use rand::Rng;
 
 fn main() {
 
-    let contents = fs::read_to_string("advice")
-        .expect("Error reading advice file");
+    let bytes = include_bytes!("advice");
+
+    let contents = String::from_utf8_lossy(bytes);
     
     let advice: Vec<&str> = contents.trim().split('%').collect();
 
