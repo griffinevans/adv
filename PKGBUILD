@@ -8,16 +8,8 @@ pkgrel=1
 pkgdesc="Dispenses programming aphorisms in the style of UNIX fortune"
 arch=('x86_64')
 url="https://github.com/griffinevans/adv"
-license=('UNLICENSE')
-groups=()
-depends=()
-makedepends=()
-checkdepends=()
-optdepends=()
-provides=()
-conflicts=()
-replaces=()
-backup=()
+license=('Unlicense')
+makedepends=(cargo)
 options=()
 install=
 changelog=
@@ -28,6 +20,9 @@ md5sums=()
 validpgpkeys=()
 
 prepare() {
+  export RUSTUP_TOOLCHAIN=stable
+  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+
 	cd "$pkgname-$pkgver"
 	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
 }
