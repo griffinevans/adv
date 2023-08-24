@@ -1,4 +1,4 @@
-Write Clearly - Don't be too clever.
+Write clearly - don't be too clever.
 %
 Say what you mean, simply and directly.
 %
@@ -80,7 +80,7 @@ Make sure comments and code agree.
 %
 Don't just echo the code with comments - make every comment count.
 %
-Don't comment bad code- rewrite it.
+Don't comment bad code - rewrite it.
 %
 Use variable names that mean something.
 %
